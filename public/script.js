@@ -48,6 +48,16 @@ document.querySelectorAll('.buy-now').forEach(button => {
     const price = parseFloat(event.target.getAttribute('data-price'));
     const image = event.target.closest('.product').querySelector('img').src; // Get the product image URL
     const quantity = parseInt(event.target.closest('.product').querySelector('.quantity-input').value);
+    const quantityInput = document.querySelector(`.quantity-input[data-product-id="${productId}"]`);
+
+    const maxQuantity = quantityInput.getAttribute('max');
+    const currentQuantity = quantityInput.value;
+
+    // Check if the quantity exceeds the max limit
+    if (parseInt(currentQuantity) > parseInt(maxQuantity)) {
+      alert('The quantity exceeds the maximum allowed, product may be refunded!');
+      return;  // Prevent adding to the cart
+    }
 
     // Check if quantity is a valid number
     if (isNaN(quantity) || quantity <= 0) {
