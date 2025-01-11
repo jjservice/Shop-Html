@@ -438,16 +438,23 @@ summary:hover{
     color: white;
     text-shadow: 0px 0px 4px gold;
 }
-#card-element{
-    margin: 0% auto;
-    width: 80%;
-    border: 2px solid darkgray;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.555);
- 
-   
+.buy-now{
+  margin: 0% auto;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: green;
+  border: 1px solid lightskyblue;
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px darkgray;
+  opacity: 90%;
+}
+.buy-now:hover{
+  transform: scale(1.10);
+  transition: 1s;
+  opacity: 100%;
 }
 #checkout-btn{
     border: none;
