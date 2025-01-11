@@ -10,6 +10,12 @@ function updateCart() {
   let total = 0;
 
   cart.forEach(item => {
+    // Validate item properties to prevent displaying undefined values
+    if (!item.id || !item.name || !item.image || isNaN(item.price) || isNaN(item.quantity)) {
+      console.error("Invalid item in cart:", item);
+      return; // Skip rendering this item if it's invalid
+    }
+
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     cartItem.innerHTML = `
@@ -46,6 +52,12 @@ document.querySelectorAll('.buy-now').forEach(button => {
     // Check if quantity is a valid number
     if (isNaN(quantity) || quantity <= 0) {
       alert("Please select a valid quantity.");
+      return;
+    }
+
+    // Ensure all product data is valid before adding to the cart
+    if (!productId || !productName || isNaN(price) || !image || isNaN(quantity) || quantity <= 0) {
+      alert("Missing or invalid product data.");
       return;
     }
 
@@ -103,7 +115,6 @@ if (window.location.pathname === '/success') {
 
 // Initialize the cart display on page load
 updateCart();
-
 
 // Handle the 'Proceed to Checkout' button click
 document.getElementById('checkout-btn').addEventListener('click', async () => {
