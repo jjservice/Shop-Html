@@ -24,13 +24,16 @@ app.post('/create-checkout-session', async (req, res) => {
       quantity: 1,
     }));
 
-    // Create a checkout session
+    // Create a checkout session with shipping address collection
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: line_items,
       mode: 'payment',
       success_url: `${req.headers.origin}/success`,
       cancel_url: `${req.headers.origin}/cancel`,
+      shipping_address_collection: {
+        allowed_countries: ['US', 'CA'], // Specify which countries are allowed for shipping
+      },
     });
 
     // Send the session ID to the frontend
