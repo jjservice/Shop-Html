@@ -1,0 +1,124 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:linear-gradient(to right, black,darkblue,maroon,black);
+    color: white;
+    padding: 10px;
+}
+
+.product-List{
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+.product {
+     margin: 0% auto;
+     display: inline;
+     margin-bottom: 20px; 
+     width: 100%;
+     height: auto;
+     padding: 10px;
+     border: 1px solid lightskyblue;
+     border-radius: 20px;
+     }
+
+.product img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+  
+}
+.buy-now { padding: 10px 20px; background-color: #007bff; color: white; cursor: pointer; border: none; }
+.buy-now:hover { background-color: #0056b3; }
+.cart { margin-top: 30px; }
+.cart-item { margin-bottom: 10px; }
+.cart-item span { margin-right: 10px; }
+#cart-total { font-weight: bold; }
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+  overflow: auto;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  position: relative;
+}
+.modal img {
+  width: 100%; /* Make image fill the modal */
+  height: auto;
+}
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  padding: 5px;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Next/Previous Button Styles */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  transition: 0.3s ease;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+@media (min-width: 768px){
+    .product-List{
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+    }
+
+}
