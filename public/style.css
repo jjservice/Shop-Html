@@ -1,124 +1,1274 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 body{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background:linear-gradient(to right, black,darkblue,maroon,black);
-    color: white;
-    padding: 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to right,black,darkblue,maroon,black);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: 1s;  
+
+}
+body.lightStore{
+  background: linear-gradient(to right,black,darkblue,lightgreen,maroon,black);
+  transition: 1s;
+}
+h1{
+  margin: 0% auto;
+  width: 90%;
+  color: white;
+  text-shadow: 2px 2px 4px darkblue;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 5px;
+  background-image: url(AstronautHeadLogoGif.gif);
+  background-position: center;
+  background-size: 40%;
+  opacity: 80%;
+  border-radius: 100%;
+  border: 6px solid rgba(15, 50, 209, 0.644);
+  box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 1s;
+
+}
+h1 ion-icon{
+  border-bottom: 2px solid wheat;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px darkgreen;
+  background-image: url(lollipop_3GIF.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.lightStore h1{
+  background-color: rgba(0, 0, 0, 0.39);
+  border-top: 6px solid maroon;
+  border-bottom: 6px solid rgba(0, 0, 255, 0.466);
+  border-left: 6px solid rgba(255, 217, 0, 0.863);
+  border-right: 6px solid rgba(255, 217, 0, 0.863);
+  box-shadow: 0px 2px 15px black;
+  text-shadow: 2px 2px 4px gold;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+body.lightStore h1 ion-icon{
+  color: rgba(255, 217, 0, 0.486);
+  border-bottom: 3px solid rgba(64, 64, 250, 0.904);
+ 
+}
+h2{
+  margin-bottom: 15px;
+}
+h3{
+  color: wheat;
+  text-shadow: 2px 2px 4px darkblue;
+  margin-bottom: 2px;
+ 
+}
+.size-tag{
+  color: yellow;
+  text-shadow: 1px 1px 2px black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
-.product-List{
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    gap: 10px;
-    padding: 10px;
+
+.nav-info{
+margin: 0% auto;
+align-items: center;
+text-align:  center;
+margin-bottom: 15px;
+opacity: 90%;
+transition: 1s ease-in;
 }
-.product {
-     margin: 0% auto;
-     display: inline;
-     margin-bottom: 20px; 
-     width: 100%;
-     height: auto;
-     padding: 10px;
-     border: 1px solid lightskyblue;
-     border-radius: 20px;
-     }
+.nav-info a{
+text-decoration: none;
+text-align: center;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: rgba(245, 222, 179, 0.842);
+text-shadow: 0px 1px 2px whitesmoke;
+letter-spacing: 1px;
+border: 1px solid blue;
+box-shadow: 0px 2px 0px rgba(135, 206, 250, 0.815);
+padding: 5px 10px;
+margin: 5px;
+border-radius: 10px;
+}
+
+body.lightStore .nav-info a:hover{
+border-bottom: 8px solid palevioletred;
+transition: 0.5s;
+
+}
+
+
+.nav-info a:hover{
+border-bottom: 8px solid palevioletred;
+transition: 0.5s;
+
+}
+body.lightStore .nav-info a{
+color: white;
+text-shadow: 2px 2px 4px rgba(255, 217, 0, 0.842);
+border-top: 2px solid rgba(153, 205, 50, 0.774);
+border-bottom: 1px solid crimson;
+background-color: rgba(0, 0, 0, 0.623);
+box-shadow: 0px 1px 0px darkblue;
+transition: 1s ease-out;
+}
+#language-select{
+margin: 0% auto;
+display: flex;
+position: relative;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 14px;
+color: rgba(180, 153, 1, 0.904);
+left: 0px;
+bottom: 25px;
+margin-bottom: 2px;
+border-radius: 6px;
+background-color: rgba(255, 255, 255, 0.13);
+color: wheat;
+border: none;
+text-shadow: 1px 1px 2px yellowgreen;
+cursor: pointer;
+transition: 1s;
+}
+body.lightStore #language-select{
+  background-color: rgba(0, 0, 139, 0.616);
+}
+
+#voice-search-btn{
+margin: 0% auto;
+background-color: transparent;
+position: relative;
+right: 158px;
+bottom: 34px;
+border-radius: 0px;
+border: none;
+border-right: 2px solid rgba(135, 206, 250, 0.589);
+cursor: pointer;
+font-size: 24px;
+color: blue;
+text-shadow: 0px 2px 4px lightskyblue;
+}
+
+body.lightStore #voice-search-btn{
+text-shadow: 0px 2px 4px rgba(153, 205, 50, 0.973);
+border-right: 2px solid rgba(153, 205, 50, 0.781) ;
+transition: 1s;
+}
+
+#search-bar {
+margin: 0% auto;
+display: flex;
+width: 350px;
+padding: 6px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 20px;
+color: white;
+text-shadow: 1px 1px 2px gold;
+border: 1px solid rgba(153, 205, 50, 0.788);
+border-radius: 10px;
+background-color: rgba(18, 119, 177, 0.438);
+text-align: center;
+box-shadow: 0px 1px 5px lightsalmon;
+cursor: pointer;
+
+}
+#search-bar:focus{
+background-color: rgba(4, 14, 87, 0.322);
+transition: 0.5s;
+}
+body.lightStore #search-bar:focus{
+background-color: rgba(119, 0, 0, 0.267);
+transition: 0.5s;
+}
+body.lightStore #search-input{
+background-color: rgba(221, 57, 112, 0.233);
+transition: 0.5s;
+}
+.product{
+  text-align: center;
+}
+.product-List{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+padding: 10px;
+}
+
+.product-List3 .product {
+text-decoration: none;
+transition: 1s;
+animation: moveNavbar 30s linear infinite; 
+animation-play-state: running;
+cursor: pointer;
+
+}
+
+.product-List3 .product:hover {
+color: #ff5722;
+transform: scale(1.10);
+transition: 0.5s;
+box-shadow: 0px 2px 10px gold;
+margin: 0% auto;
+position: relative;
+display: inline;
+cursor: pointer;
+
+}
+
+@keyframes moveNavbar {
+100% {
+  transform: translateX(100%);
+}
+100% {
+  transform: translateX(-500px);
+}
+}
+.product-List3{
+margin: 0% auto;
+display: flex;
+flex-wrap: row;
+width: 370px;
+text-align: center;
+align-items: center;
+justify-content: space-between;
+border-right: 4px solid red;
+border-left: 4px solid blue;
+border-top: 4px solid rgba(255, 217, 0, 0.808);
+border-bottom: 4px solid rgba(255, 217, 0, 0.808);
+box-shadow: 0px 2px 10px lightskyblue;
+border-radius: 20px;
+overflow: scroll;
+gap: 20px;
+padding: 10px;
+}
+body.lightStore .product-List3{
+  box-shadow: 0px 2px 10px yellowgreen;
+}
+.product-List3::-webkit-scrollbar{
+background: transparent;
+width: 0px;
+height: 15px;
+
+}
+.product-List3::-webkit-scrollbar-track{
+background: transparent;
+box-shadow: 0px 2px 6px yellowgreen;
+border-radius: 20px;
+width: 0;
+height: 0;
+}
+
+.product-List3::-webkit-scrollbar-thumb{
+background: darkblue;
+border: 1px solid rgba(255, 217, 0, 0.781);
+border-radius: 10px;
+width: 0px;
+height: 0px;
+cursor: grab;
+}
+.product-List3::-webkit-scrollbar-thumb:hover{
+background-color: green;
+
+}
+.product-List3::-webkit-scrollbar-thumb:active{
+cursor: grabbing;
+}
 
 .product img{
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-  
+  margin: 0% auto;
+  width: 150px;
+  height: 150px;
+  border: 2px solid lightskyblue;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px white;
 }
-.buy-now { padding: 10px 20px; background-color: #007bff; color: white; cursor: pointer; border: none; }
-.buy-now:hover { background-color: #0056b3; }
-.cart { margin-top: 30px; }
-.cart-item { margin-bottom: 10px; }
-.cart-item span { margin-right: 10px; }
-#cart-total { font-weight: bold; }
-
-/* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7); /* Black background with opacity */
-  overflow: auto;
+.product img:hover{
+  transform: scale(1.10);
+  transition: 0.5s;
+  cursor: pointer;
 }
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+body.lightStore .product img{
+  border: 2px solid rgba(255, 217, 0, 0.616);
+  box-shadow: 0px 5px 20px black;
+  transition: 1s;
+}
+.buy-now{
+  border: none;
+  padding: 6px;
+  color: white;
+  font-size: 12px;
+  background-color: rgb(0, 139, 19);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.buy-now:hover{
+ background-color: darkgreen;
+ transform: scale(1.05);
+ transition: 0.5s;
+}
+#checkout-btn{
+  border: none;
+  padding: 6px;
+  color: white;
+  font-size: 15px;
+  background-color: rgb(0, 139, 19);
+  border-radius: 6px;
+  cursor: pointer;
+}
+#checkout-btn:hover{
+  background-color: blue;
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+}
+#checkout-btn:hover::after{
+  content: "-Now!";
+  display: inline-block;
   position: relative;
 }
-.modal img {
-  width: 100%; /* Make image fill the modal */
-  height: auto;
-}
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  padding: 5px;
-}
-.close:hover,
-.close:focus {
-  color: black;
+.cart{
+
+  list-style: none;
   text-decoration: none;
-  cursor: pointer;
+  margin: 0% auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.623);
+  border-radius: 7px;
+  border: 1px solid rgba(255, 217, 0, 0.514);
+  box-shadow: 0px 2px 6px darkgray;
+  overflow: scroll;
+  height: 20vh;
 }
-
-/* Next/Previous Button Styles */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1;
+.cart::-webkit-scrollbar{
+  width: 10px;
+  height: 0px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
   border: none;
-  transition: 0.3s ease;
+  box-shadow: 0px 3px 6px lightskyblue;
 }
-.prev {
+body.lightStore .cart::-webkit-scrollbar{
+  box-shadow: 0px 3px 6px yellowgreen;
+}
+.cart::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 255, 0.795);
+  border-radius: 20px;
+  width: 10px;
+  height: 0px;
+}
+.cart::-webkit-scrollbar-thumb:hover{
+  background-color: green;
+}
+.cart summary{
+  color: white;
+  text-shadow: 2px 2px 4px darkblue;
+  text-decoration: underline;
+  font-size: 20px;
+  margin-top: -15px;
+}
+#cart-items{
+  color: white;
+  text-shadow: 2px 2px 4px darkblue;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+p{
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+}
+@media  (min-width: 768px) {
+.product-List{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 10px;
+}
+  h1{
+     margin: 0% auto;
+     font-size: 40px;
+     padding: 5px;
+     max-width: 700px;
+     margin-bottom: 15px;
+ 
+ }
+ .cart{
+  min-width: 50%;
+  height: 200px;
+ }
+ .cart h2{
+  font-size: 25px;
+
+}
+ #cart-container{
+  max-width: 600px;
+ }
+ .quantity-input{
+  margin: 0% auto;
+  min-width: 150px;
+  
+}
+h4{
+  margin: 0% auto;
+  min-width: 300px;
+} 
+
+#search-bar {
+margin: 0% auto;
+display: flex;
+width: 550px;
+
+}
+#voice-search-btn{
+margin: 0% auto;
+position: relative;
+display: flex;
+right: 257px;
+bottom: 35px;
+}
+#language-select{
+  margin: 0% auto;
+  position: relative;
+  left: 0px;
+ 
+  }
+}
+
+
+#toggle-cart {
+position: relative;
+}
+
+.cart-badge {
+position: absolute;
+top: -5px;
+right: -10px;
+background-color: green;
+color: white;
+font-size: 12px;
+padding: 5px;
+border-radius: 50%;
+min-width: 20px;
+text-align: center;
+}
+body.lightStore .cart-badge{
+background-color: magenta;
+
+}
+
+.cart {
+  display: block; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+body.lightStore .cart img{
+  border: 1px solid gold;
+  box-shadow: 0px 2px 6px yellowgreen;
+}
+
+
+.cart.hidden {
+  display: none;
+}
+#cart-items img{
+  width:  30px;
+  height: 30px;
+  padding: 2px;
+  border: 1px solid lightskyblue;
+  box-shadow: 0px 2px 6px white;
+  border-radius: 8px;
+}
+#cart-items{
+  font-size: 15px;
+}
+#cart-items input{
+  width: 50px;
+  padding: 0;
+}
+
+#toggle-cart {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.432);
+  border: 1px solid rgba(255, 217, 0, 0.753);
+  cursor: pointer;
+}
+body.lightStore #toggle-cart{
+  background-color: blue;
+  box-shadow: 0px 2px 10px black;
+}
+body.lightStore #toggle-cart:hover {
+  background-color: green;
+}
+
+
+#toggle-cart:hover {
+  background-color: green;
+}
+
+.remove-item{
+  border: none;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.quantity-input{
+  margin: 0% auto;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid lightskyblue;
+  border-radius: 6px;
+  width: 50px;
+  
+}
+h6{
+  position: absolute;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  text-shadow: 2px 2px 4px lightcoral;
+  background-color: rgba(0, 0, 139, 0.603);
+  box-shadow: 0px 3px 15px lightskyblue;
+  padding: 10px 5px;
+  border-radius: 12px;
+  
+}
+body.lightStore h6{
+  box-shadow: 0px 3px 10px black;
+  background-color: rgba(0, 100, 0, 0.664);
+}
+h6 ion-icon{
+  color: rgba(255, 217, 0, 0.596);
+  font-weight: bold;
+  border-bottom: 2px solid gold;
+  box-shadow: 0px 2px 10px #ff1060e8;
+  border-radius: 50px;
+  background-image: url(lollipop_3GIF.gif);
+  background-size: cover;
+  background-position: center;
+}
+body.lightStore h6 ion-icon{
+  box-shadow: 0px 0px 5px pink;
+}
+
+.navigation{
+  margin: 0% auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  border: none;
+  background: transparent;
+}
+.navigation::-webkit-scrollbar{
+  width: 0%;
+}
+.navigation::-webkit-scrollbar-track {
+  box-shadow: 0px 2px 6px rgba(162, 219, 48, 0.897);
+  border-radius: 10px;
+}   
+.navigation::-webkit-scrollbar-thumb{
+  border: 1px solid rgba(255, 217, 0, 0.856);
+  border-radius: 10px;
+  background: rgba(0, 0, 139, 0.562); 
+  cursor: grab; 
+}
+.navigation::-webkit-scrollbar-thumb:hover {
+  background: green;
+  cursor: grab;
+}
+.navigation::-webkit-scrollbar-thumb:active{
+  cursor: grabbing;
+}
+.navigation .mlb{
+  margin: 5px;
+  padding: 50px;
+  border: 1px solid rgba(255, 217, 0, 0.863);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(AirforceWhitePi4.png);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .mlb:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .mlb ion-icon{
+  color: transparent;
+}
+.navigation .nba{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image: url(MonkeyDesignGif.gif);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .nba:hover{
+  color: transparent;
+  transform: scale(1.10);
+  transition: 0.5s;
+}
+.navigation .nba ion-icon{
+  color: transparent;
+}
+.navigation .L-Accesories-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.863);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(AirforceWhitePi1.png);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .L-Accesories-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Accesories-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Clothing-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(Razerpic2.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .L-Clothing-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Clothing-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Shoes-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.863);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(razer3.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .L-Shoes-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Shoes-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Sneakers-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.849);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(Razerpic5.webp);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.navigation .L-Sneakers-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Sneakers-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Kitchen-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(razer6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.navigation .L-Kitchen-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Kitchen-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-RealState-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image: url(razerpic00.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.navigation .L-RealState-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-RealState-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Glasses-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(razerpic1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.navigation .L-Glasses-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Glasses-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Watches-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(AirforceWhitePi2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.navigation .L-Watches-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Watches-Nav ion-icon{
+  color: transparent;
+}
+.navigation .L-Men-Fashion-Nav{
+  margin: 5px;
+  padding: 50px;
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
+  background-image:url(AirforceWhitePi3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.navigation .L-Men-Fashion-Nav:hover{
+  box-shadow: 2px 2px 10px lightgreen;
+  background-color: rgba(255, 217, 0, 0.349);  
+  transform: scale(1.10);
+  transition: 0.5s; 
+}
+.navigation .L-Men-Fashion-Nav ion-icon{
+  color: transparent;
+}
+h4{
+  margin: 0% auto;
+  width: 200px;
+  color: white;
+  text-shadow: 2px 2px 2px darkblue;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.26);
+  padding: 5px;
+  border-bottom: 2px solid wheat;
+  box-shadow: 0px 2px 6px lightskyblue;
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+body.lightStore h4{
+  border-bottom: 2px solid rgba(153, 205, 50, 0.774);
+  box-shadow: 0px 3px 10px black;
+  text-shadow: 2px 2px 4px rgba(255, 217, 0, 0.856);
+  background-color: rgba(0, 0, 0, 0.651);
+}
+
+#in-Stock{
+  color: wheat;
+  text-shadow: 2px 2px 2px darkblue;
+  font-size: 16px;
+}
+#Price-tag{
+  margin: 0% auto;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.411);
+  border-radius: 10px;
+  width: 80px;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(153, 205, 50, 0.781);
+}
+.product{
+  margin: 0% auto;
+  padding: 10px;
+  border: 1px solid lightskyblue;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.096);
+}
+body.lightStore .product{
+  border: none;
+  border-left: 1px solid red;
+  border-right: 1px solid blue;
+  background-color: rgba(68, 5, 31, 0.24);
+
+}
+
+.container{
+  margin: 0px;
+  padding: 0px;
+  display: none;
+  height: 0px;
+  width: 0px;
+}
+
+@media (min-width: 768px) {
+  .nav-info{
+    position: absolute;
+    left: 5px;
+    top: 155px;
+    gap: 10px;
+    opacity: 90%;
+    
+  }
+  .nav-info a{
+    margin: 5px;
+  }
+  .container{
+    margin: 0% auto;
+    display: block;
+    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    min-width: 300px; 
+  }
+.Box{
+  margin: 0% auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  animation: animate 15s linear infinite;
+}
+@keyframes animate {
+  0% {
+      rotate: 0deg;
+  }
+  100% {
+      rotate: 360deg;
+  }
+}
+.container:hover .Box{
+  animation-play-state: paused;
+}
+.img{
+  position: relative;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.img .imgBox{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 217, 0, 0.801);
+  transform: rotate(calc(360deg/8 * var(--i)));
+  transform-origin: 190px;
+  box-shadow: 0px 2px 20px blue;
+}
+body.light .img .imgBox{
+  box-shadow: 0px 2px 15px #ff105e;
+  border: 2px solid rgba(255, 217, 0, 0.863);
+}
+
+.img .imgBox img{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: rotate(calc(-360deg/8 * var(--i)));
+  animation: animateimgBox 15s linear infinite;
+}
+
+.container:hover .img .imgBox img{
+  animation-play-state: paused;
+}
+
+@keyframes animateimgBox {
+  0% {
+      rotate: 0deg;
+  }
+  100% {
+      rotate: -360deg;
+  } 
+}
+h5{
+margin: 0% auto;
+position: relative;
+width: 160px;
+bottom: -170px;
+left: 0px;
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+color: white;
+text-shadow: 2px 2px 4px lightcoral;
+background-color: rgba(0, 0, 139, 0.603);
+box-shadow: 0px 2px 12px lightskyblue;
+padding: 10px 20px;
+border-radius: 15px;
+
+}
+h5 ion-icon{
+color: rgba(255, 217, 0, 0.596);
+font-weight: bold;
+border-bottom: 2px solid gold;
+box-shadow: 0px 2px 10px #ff1060e8;
+border-radius: 50px;
+background-image: url(lollipop_3GIF.gif);
+background-size: cover;
+background-position: center;
+}
+body.lightStore h5 ion-icon{
+box-shadow: 0px 2px 15px blue;
+}
+#cart-items img{
+width:  50px;
+height: 50px;
+padding: 2px;
+border: 1px solid lightskyblue;
+box-shadow: 0px 2px 6px white;
+border-radius: 8px;
+}
+#cart-items{
+font-size: 18px;
+}
+#cart-items input{
+width: 100px;
+padding: 5px;
+}
+
+.image-container {
+  margin: 0% auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  min-width: 500px;
+ 
+}
+.blink-image {
+  min-width: 100px;
+  min-height: 100px;
+  object-fit: cover;
+  opacity: 0; /* Initially hide the images */
+  animation: blink 10s infinite;
+}
+.image-container img{
+  padding: 10px;
+  border: 1px solid lightskyblue;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px lightskyblue;
+  margin-inline: 15px;
+ 
+}
+body.lightStore .image-container img{
+  border: 1px solid yellowgreen;
+  box-shadow: 0px 2px 6px gold;
+}
+.blink-image:nth-child(7) {
+  display: none;
+}
+.blink-image:nth-child(8) {
+  display: none;
+}
+
+
+}
+.image-container {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  align-items: center;
+  text-align: center;
+  width: 370px;
+  
+}
+.image-container img{
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid lightskyblue;
+  box-shadow: 0px 2px 5px lightskyblue;
+  margin-inline: 2px;
+  cursor: pointer;
+}
+body.lightStore .image-container img{
+  border: 2px solid yellowgreen;
+  box-shadow: 0px 2px 5px rgba(255, 217, 0, 0.849);
+  transition: 1s;
+}
+.blink-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  opacity: 0; /* Initially hide the images */
+  animation: blink 10s infinite;
+}
+
+.blink-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.blink-image:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.blink-image:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.blink-image:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.blink-image:nth-child(5) {
+  animation-delay: 8s;
+}
+.blink-image:nth-child(6) {
+  animation-delay: 10s;
+}
+
+.blink-image:nth-child(7) {
+  animation-delay: 12s;
+}
+.blink-image:nth-child(8) {
+  animation-delay: 14s;
+}
+
+@keyframes blink {
+  0%, 20%, 40%, 60%, 80%, 100% {
+      opacity: 0;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 1;
+}
+       
+  } 
+.Buy-Now-Tag{
+  margin: 0% auto;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 0, 0.603);
+  box-shadow: 0px 2px 6px lightskyblue;
+  padding: 5px;
+  border-radius: 10px;
+}
+.Buy-Now-Tag:hover{
+  transform: scale(1.10);
+  transition: 0.5s;
+}
+body.lightStore .Buy-Now-Tag{
+  border-top: 2px solid yellowgreen;
+  border-bottom:2px solid yellowgreen;
+  border-left: 2px solid red;
+  border-right: 2px solid blue;
+  background-color: rgba(0, 0, 0, 0.603);
+  box-shadow: 0px 2px 6px yellowgreen;
+}
+.product input{
+  margin: 0% auto;
+  text-align: center;
+  align-items: center;
+  width: 55px;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+}
+.Offer-Tag{
+  margin: 0% auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.466);
+  box-shadow: 0px 2px 6px lightskyblue;
+  padding: 5px;
+  border-top: 2px solid lightskyblue;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+body.lightStore .Offer-Tag{
+  color: white;
+  text-shadow: 2px 2px 4px gold;
+  box-shadow: 0px 2px 6px darkgreen;
+  border-top: 2px solid yellowgreen;
+}
+
+
+body.lightPlayer #save-note{
+  border-bottom: 1px solid rgba(153, 205, 50, 0.87);
+  box-shadow: 0px 2px 5px black;
+}
+#start-button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px darkblue;
+    background-color: rgba(139, 0, 97, 0.541);
+    border-top: 2px solid rgba(135, 206, 250, 0.877);
+    cursor: pointer;
+}
+body.lightPlayer #start-button{
+  border-top: 2px solid rgba(153, 205, 50, 0.781);
+}
+#language-selector{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px darkblue;
+    background-color: rgba(255, 255, 255, 0.164);
+    border-top: 2px solid rgba(135, 206, 250, 0.877);
+    margin-right: 5px;
+    cursor: pointer;
+}
+body.lightPlayer #language-selector{
+  border-top: 2px solid rgba(153, 205, 50, 0.781);
+}
+#language-selector option{
+  background-color: rgba(0, 0, 139, 0.822);
+ 
+}
+body.lightPlayer #language-selector option{
+  background-color: rgba(49, 1, 49, 0.856);
+}
+
+
+footer{
+  margin: 0% auto;
+  flex-direction: column;
+  bottom: 0%;
   left: 0;
-  border-radius: 3px 0 0 3px;
-}
-.next {
-  right: 0;
-  border-radius: 0 3px 3px 0;
-}
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(48, 47, 47);
+  justify-content: center;
+  align-items: center;
+   }
+   footer p{
+    margin: 0% auto;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.116);
+    padding: 2.5px;
+    border-radius: 20px;
+    color: rgb(102, 100, 100);
+    text-shadow: none;
+    text-align: center;
+   }
+   footer ion-icon{
+    color: rgba(255, 217, 0, 0.411);
+   }
+
+   
 
 
 
 
 
-@media (min-width: 768px){
-    .product-List{
-        grid-template-columns: repeat(4, 1fr);
-        display: grid;
-        gap: 20px;
-        padding: 20px;
-    }
 
-}
+
+
+  
+
+  
+  

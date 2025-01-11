@@ -6,20 +6,195 @@
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS -->
+
+  <style>
+    /* Modal for image slider */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      padding: 2px;
+      border: 2px solid lightskyblue;
+      border-radius: 8px;
+      box-shadow: 0px 2px 10px white;
+    }
+    body.lightStore .modal-content img {
+      border: 2px solid gold;
+      border-radius: 8px;
+      box-shadow: 0px 2px 10px yellowgreen;
+    }
+
+    /* Next and Previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: #f1f1f1;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    @media (min-width: 768px){
+    .modal-content{
+      padding-top: 60px;
+    }
+    .modal-content img {
+      width: 400px;
+      height: auto;
+    }
+    }
+
+  </style>
 </head>
 <body>
-  <h1>Product Store</h1>
+  <h1 onclick="toggleClassPlayer()">LOLLIP<ion-icon name="color-palette-outline"></ion-icon>P CLUB</h1>
+    
 
 
-  <details class="cart">
-    <summary> <h2>Your Cart</h2></summary>
-    <!-- Cart Section -->
+  <!-- Search Bar -->
+  <input type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()">
+  <button id="voice-search-btn" aria-label="Voice Search">🎙️</button>  
+  
+  <!-- Dropdown for language selection -->
+  <select id="language-select">
+    <option value="en-US">English (US)</option>
+     <option value="es-ES">Spanish</option>
+     <option value="fr-FR">French</option>
+     <option value="de-DE">German</option>
+     <option value="it-IT">Italian</option>
+   </select>
+
    
+  <!-- Navigation Info -->
+  <div class="nav-info">
+    <a href="https://jjservice.github.io/L2/1.html"><ion-icon name="home"></ion-icon></a>
+    <a href="About.html">About</a>
+    <a href="ContactForm.html">Contact</a>
+    <a href="Faq.html">FAQ</a>
+  </div>
+
+  <!-- Navigation Section -->
+    <details class="cart">
+      <summary style="list-style-type: none; font-size: 25px; cursor: pointer;">CART</summary>
     <div id="cart-items"></div>
     <p id="cart-total">Total: $0.00</p>
     <button id="checkout-btn" style="display:none;">Proceed to Checkout</button>
   </details>
+
+     <!-- Navigation Section -->
+
+     <div class="navigation">
+     
+      <div class="L-Clothing-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="nba"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Watches-Nav"><a href="https://buy.stripe.com/bIY2aX6Xr4qde884gn"><ion-icon name="finger-print"></ion-icon></a></div> 
+      <div class="L-Sneakers-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Accesories-Nav"><a href="https://buy.stripe.com/bIY2aX6Xr4qde884gn"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-RealState-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Men-Fashion-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Glasses-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Shoes-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-Kitchen-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="L-RealState-Nav"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
+      <div class="nba"><a href="https://buy.stripe.com/eVadTF4Pj5uh8NO3ci"><ion-icon name="finger-print"></ion-icon></a></div>
   
+      </div>
+  
+      <div class="container">
+        <h5>LOLLIP<ion-icon name="headset-sharp"></ion-icon>P</h5> 
+        <div class="Box">
+            <div class="img">
+  
+                <div class="imgBox" style="--i:1;">
+                    <a href="#"><img src="NikeAirForce1'07-mainPic.png"></a>
+                </div>
+  
+                <div class="imgBox" style="--i:2;">
+                    <a href="#"><img src="razer6.jpg"></a>
+                </div>
+  
+                <div class="imgBox" style="--i:3;">
+                    <a href="#"><img src="NikeAirForceWaterGif.gif"></a>
+                </div>
+  
+                <div class="imgBox" style="--i:4;">
+                  <a href="#"><img src="razerpic00.jpg"></a>
+              </div>
+  
+              <div class="imgBox" style="--i:5;">
+                  <a href="#"><img src="AirforceWhitePi1.png"></a>
+              </div>
+  
+              
+              <div class="imgBox" style="--i:6;">
+                <a href="#"><img src="Razerpic5.webp"></a>
+             </div>            
+  
+              <div class="imgBox" style="--i:7;">
+                <a href="#"><img src="Razerpic2.jpg"></a>
+             </div>
+  
+            <div class="imgBox" style="--i:8;">
+                <a href="#"><img src="MonkeyDesignGif.gif"></a>
+            </div>
+  
+  
+               
+  
+            </div>
+        </div>
+    </div>
+  
+     <!---------- Blink Section-------------->
+    <div class="image-container">
+      <img src="razer3.jpg" class="blink-image" alt="Image 1">
+      <img src="AirforceWhitePi4.png" class="blink-image" alt="Image 2">
+      <img src="razerpic00.jpg" class="blink-image" alt="Image 3">
+      <img src="NikeAirForce1'07-mainPic.png" class="blink-image" alt="Image 4">
+      <img src="Razerpic2.jpg" class="blink-image" alt="Image 5">
+      <img src="Razerpic5.webp" class="blink-image" alt="Image 6">
+      <img src="AirforceWhitePi1.png" class="blink-image" alt="Image 7">
+      <img src="razer6.jpg" class="blink-image" alt="Image 8">
+  </div>
+
 
   <!-- Product List -->
   <ul class="product-List">
@@ -115,6 +290,102 @@
     }
   </script>
 
+  <script>
+        // Search Bar function
+function searchProducts() {
+  let input = document.getElementById('search-bar').value.toLowerCase();
+
+  // Remove period from the end of the input if exists
+  if (input.endsWith('.')) {
+    input = input.slice(0, -1);
+  }
+
+  let products = document.getElementsByClassName('product');
+  
+  // Loop through all products and filter them based on the search input
+  for (let i = 0; i < products.length; i++) {
+    let productName = products[i].getElementsByTagName('h3')[0].textContent.toLowerCase();
+    if (productName.includes(input)) {
+      products[i].style.display = '';  // Show product if it matches search
+    } else {
+      products[i].style.display = 'none';  // Hide product if it doesn't match search
+    }
+  }
+}
+
+
+// Voice search functionality
+const voiceSearchButton = document.getElementById('voice-search-btn');
+const searchBar = document.getElementById('search-bar');
+const languageSelect = document.getElementById('language-select');
+
+// Check if browser supports SpeechRecognition
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+// Set the initial language (default to English)
+recognition.lang = languageSelect.value;
+
+// Initialize sound for notification
+let sound = new Audio('Cut-Voice-Notification-Sound.mp3'); // Path to your notification sound file
+
+// Listen for language change and update the language of recognition
+languageSelect.addEventListener('change', function() {
+  recognition.lang = languageSelect.value;
+});
+
+// Start voice recognition when the button is clicked
+voiceSearchButton.addEventListener('click', function() {
+  recognition.start();  // Start voice recognition
+  searchBar.value = '';  // Clear the search bar to show voice input
+  // Don't play sound immediately; will play once letters show up in the input
+});
+
+
+recognition.onresult = function(event) {
+  let transcript = event.results[0][0].transcript.toLowerCase();  // Get the speech-to-text result
+
+ 
+  if (transcript.endsWith('.')) {
+    transcript = transcript.slice(0, -1);
+  }
+
+  searchBar.value = transcript;  // Update the search bar with the transcript
+  searchProducts();  // Perform search with the voice input
+
+  // Play the notification sound only if there is a valid search input in the search bar
+  if (transcript.length > 0) {
+    sound.play();
+  }
+};
+
+// Optional: Handle errors in speech recognition
+recognition.onerror = function(event) {
+  console.log("Error occurred in recognition: " + event.error);
+};
+
+
+////To handle QT////
+
+document.querySelectorAll('.product').forEach(function(product, index) {
+    let quantityInput = product.querySelector('input[type="number"]');
+    let stock = parseInt(product.querySelector(`#stock${index + 1}`).textContent);
+
+    quantityInput.addEventListener('input', function() {
+        let selectedQuantity = parseInt(quantityInput.value);
+        
+        if (selectedQuantity > stock) {
+            quantityInput.value = stock; // Set the quantity to max stock value
+            alert("Quantity exceeds available stock!");
+        }
+    });
+});
+
+  </script>
+
   <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
