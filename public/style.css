@@ -245,7 +245,7 @@ padding: 10px;
 .cart-container{
   position: fixed;
   margin: 0% auto;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
@@ -885,6 +885,10 @@ body.lightStore .product{
     margin-top: 30px;
     margin-bottom: 50px;
     min-width: 300px; 
+  }
+  .cart-container{
+    top: 40%;
+    width: 50%;
   }
   summary{
     margin: 0% auto;
