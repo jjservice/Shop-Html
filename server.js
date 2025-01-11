@@ -7,13 +7,22 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-// Endpoint to create a Stripe checkout session with a cart
 app.post('/create-checkout-session', async (req, res) => {
   try {
     const { items } = req.body;
 
-    // Create line items for each product in the cart
-    const line_items = items.map(item => ({
+    // Create a map to accumulate quantities for each item
+    const itemMap = items.reduce((acc, item) => {
+      if (acc[item.name]) {
+        acc[item.name].quantity += item.quantity; // Add to the existing quantity
+      } else {
+        acc[item.name] = { ...item }; // Create a new entry if it doesn't exist
+      }
+      return acc;
+    }, {});
+
+    // Convert the item map back to an array of line items
+    const line_items = Object.values(itemMap).map(item => ({
       price_data: {
         currency: 'usd',
         product_data: {
@@ -21,7 +30,7 @@ app.post('/create-checkout-session', async (req, res) => {
         },
         unit_amount: Math.round(item.price * 100), // Price in cents
       },
-      quantity: 1,
+      quantity: item.quantity, // Correct quantity for each item
     }));
 
     // Create a checkout session with shipping address collection
@@ -43,6 +52,7 @@ app.post('/create-checkout-session', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 
 // Serve static files (for success/cancel pages)
 app.use(express.static('public'));
