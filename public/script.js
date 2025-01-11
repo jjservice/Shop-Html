@@ -1,6 +1,7 @@
 const stripe = Stripe('pk_test_51QTSb2LPa32ZluPp57bSF7ObgsE3CMMCcM1eSbcuMBDrhRuZV6uYL8EqqpLLiGwIAbEg8crJEYfXBDyBM5fZM5Q600fBMTS2Rt');
 
-let cart = []; // Initialize an empty cart
+// Initialize cart from localStorage if it exists, otherwise an empty array
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Function to update the cart display
 function updateCart() {
@@ -58,6 +59,9 @@ document.querySelectorAll('.buy-now').forEach(button => {
       cart[existingItemIndex].quantity += quantity;
     }
 
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
     // Show a message when item is added
     showAddToCartMessage({ name: productName, quantity });
 
@@ -73,9 +77,18 @@ document.getElementById('cart-items').addEventListener('click', (event) => {
     
     // Remove item from cart
     cart = cart.filter(item => item.id !== productId);
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update the cart display
     updateCart();
   }
 });
+
+// Initialize the cart display on page load
+updateCart();
+
 
 // Handle the 'Proceed to Checkout' button click
 document.getElementById('checkout-btn').addEventListener('click', async () => {
