@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS -->
 
   <style>
@@ -112,11 +113,13 @@
   </div>
 
   <!-- Navigation Section -->
-    <details class="cart">
-      <summary style="list-style-type: none; font-size: 25px; cursor: pointer;">CART</summary>
-    <div id="cart-items"></div>
-    <p id="cart-total">Total: $0.00</p>
+    <details>
+      <summary><i class="fa fa-shopping-cart"></i></summary>
+      <div class="cart-container">
+      <div id="cart-items"></div>
+    <p id="cart-total" style="color: black;">Total: $0.00</p>
     <button id="checkout-btn" style="display:none;">Proceed to Checkout</button>
+  </div>
   </details>
 
      <!-- Navigation Section -->
