@@ -33,7 +33,7 @@ app.post('/create-checkout-session', async (req, res) => {
       quantity: item.quantity, // Correct quantity for each item
     }));
 
-    // Create a checkout session with shipping address collection
+    // Create a checkout session with shipping address collection and billing address collection
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: line_items,
@@ -43,6 +43,7 @@ app.post('/create-checkout-session', async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['US', 'CA'], // Specify which countries are allowed for shipping
       },
+      billing_address_collection: 'required', // Collect billing address
     });
 
     // Send the session ID to the frontend
