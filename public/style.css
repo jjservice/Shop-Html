@@ -252,13 +252,14 @@ padding: 10px;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.918);
   border-radius: 10px;
-  box-shadow: 0px 2px 8px black;
+  box-shadow: 0px 2px 6px lightskyblue;
   padding: 10px;
   z-index: 100;
   margin-top: 20px;
   color: white;
   display: inline;
   list-style-type: none;
+  border: 1px solid rgba(135, 206, 250, 0.842);
   overflow-y: auto;
 }
 
@@ -334,9 +335,9 @@ summary{
     background-color: rgba(255, 255, 255, 0.185);
     border: 1px solid yellowgreen;
     box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.973);
-    color: yellow;
-    text-shadow: 2px 2px 4px darkblue;
-    opacity: 70%;
+    color: rgba(255, 255, 0, 0.829);
+    text-shadow: 2px 2px 4px rgba(0, 0, 139, 0.884);
+    opacity: 80%;
     z-index: 9999;
 }
 summary i{
@@ -387,18 +388,6 @@ cursor: grabbing;
   padding: 2px;
   border-radius: 15px;
   box-shadow: 0px 3px 10px white;
-}
-summary i{
-    cursor: pointer;
-    
-    
-}
-summary:hover{
-    transform: scale(1.10);
-    transition: 0.5s;
-    opacity: 90%;
-    color: white;
-    text-shadow: 0px 0px 4px gold;
 }
 .buy-now{
   margin: 0% auto;
