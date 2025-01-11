@@ -29,9 +29,7 @@ h1{
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 5px;
-  background-image: url(AstronautHeadLogoGif.gif);
-  background-position: center;
-  background-size: 40%;
+  background-color: #ff106013;
   opacity: 80%;
   border-radius: 100%;
   border: 6px solid rgba(15, 50, 209, 0.644);
@@ -212,15 +210,7 @@ gap: 20px;
 padding: 10px;
 }
 
-details{
-  margin: 0% auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
+
 #cart-items{
   list-style-type: none;
 }
@@ -258,7 +248,7 @@ details{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 75%;
   height: 400px;
   background-color: rgba(245, 245, 245, 0.877);
   border-radius: 10px;
@@ -275,44 +265,16 @@ details{
 #cart-items img{
   margin: 0% auto;
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   box-shadow: 0px 2px 6px black;
   margin-bottom: 5px;
 }
 
 
-details{
-  margin: 0% auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-summary{
-  margin: 0% auto;
-  width: 50px;
-  height: auto;
-  position: fixed;
-  display: flex;
-  top: 100px;
-  left: 10px;
-  font-size: 25px;
-  list-style-type: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.185);
-  border: 1px solid yellowgreen;
-  box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.973);
-  color: yellow;
-  text-shadow: 2px 2px 4px darkblue;
-  opacity: 70%;
-  z-index: 9999;
-}
+
+
 summary i{
   cursor: pointer;
   
@@ -362,8 +324,8 @@ summary{
     height: auto;
     position: fixed;
     display: flex;
-    top: 95px;
-    left: 10px;
+    top: 140px;
+    left: 5px;
     font-size: 25px;
     list-style-type: none;
     cursor: pointer;
@@ -927,17 +889,6 @@ body.lightStore .product{
 }
 
 @media (min-width: 768px) {
-  .nav-info{
-    position: absolute;
-    left: 5px;
-    top: 155px;
-    gap: 10px;
-    opacity: 90%;
-    
-  }
-  .nav-info a{
-    margin: 5px;
-  }
   .container{
     margin: 0% auto;
     display: block;
@@ -945,6 +896,12 @@ body.lightStore .product{
     margin-top: 30px;
     margin-bottom: 50px;
     min-width: 300px; 
+  }
+  summary{
+    margin: 0% auto;
+    display: inline;
+    top: 175px;
+    width: 100px;
   }
 .Box{
   margin: 0% auto;
