@@ -20,9 +20,30 @@ function updateCart() {
     cartItem.classList.add('cart-item');
     cartItem.innerHTML = `
       <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-      <span>${item.name} - $${item.price} x ${item.quantity}</span>
+      <span>${item.name} - $${item.price}</span>
+      
+      <!-- Quantity input field -->
+      <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-product-id="${item.id}">
+      
+      <span class="item-total-price">Total: $${(item.price * item.quantity).toFixed(2)}</span>
+      
+      <!-- Remove button -->
       <button class="remove-item" data-product-id="${item.id}">Remove</button>
     `;
+
+    // Add event listener for the quantity input
+    const quantityInput = cartItem.querySelector('.quantity-input');
+    quantityInput.addEventListener('input', (e) => {
+      const newQuantity = parseInt(e.target.value);
+      if (newQuantity > 0) {
+        updateItemQuantity(item.id, newQuantity);
+      } else {
+        // If invalid input (quantity less than 1), reset to the current quantity
+        e.target.value = item.quantity;
+      }
+    });
+
+    // Add to cart container
     cartItemsContainer.appendChild(cartItem);
     total += parseFloat(item.price) * item.quantity; // Update total based on quantity
   });
@@ -34,6 +55,16 @@ function updateCart() {
   const checkoutBtn = document.getElementById('checkout-btn');
   checkoutBtn.style.display = cart.length > 0 ? 'inline-block' : 'none';
 }
+
+// Function to update item quantity in the cart
+function updateItemQuantity(productId, newQuantity) {
+  const itemIndex = cart.findIndex(item => item.id === productId);
+  if (itemIndex !== -1) {
+    cart[itemIndex].quantity = newQuantity;
+    updateCart(); // Re-render the cart after updating quantity
+  }
+}
+
 
 // Function to show a message when an item is added
 function showAddToCartMessage(item) {

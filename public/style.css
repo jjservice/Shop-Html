@@ -262,6 +262,19 @@ padding: 10px;
   border: 1px solid rgba(135, 206, 250, 0.842);
   overflow-y: auto;
 }
+#cart-items input{
+  margin: 0% auto;
+  max-width: 15%;
+  padding: 5px 10px;
+
+}
+#cart-items .item-total-price{
+  margin: 0% auto;
+  max-width: 40%;
+  color: gold;
+  text-align: right;
+  
+}
 
 #cart-items img{
   margin: 0% auto;
