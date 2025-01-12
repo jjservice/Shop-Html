@@ -217,9 +217,9 @@
       <img src="razerpic00.jpg" alt="Razer Kishi" onclick="openModal(['razerpic00.jpg', 'razerpic1.jpg', 'Razerpic5.webp'])">
       <h3>Razer Kishi for iPhone - Universal Gaming Controller for iOS X-LARGE</h3>
       <p class="size-tag">- Clickable Analog Thumbsticks<br>- Universal Fit<br>- Ultra-Low Latency Gameplay</p>
-      <p id="Price-tag">$69.99</p>
+      <p id="Price-tag">$59.99</p>
       <input type="number" class="quantity-input" value="1" min="1" max="1" data-product-id="2">
-      <p id="in-Stock">In Stock: <span id="stock1">1</span></p>
+      <p id="in-Stock">In Stock: <span id="stock2">1</span></p>
       <button class="buy-now" data-product-id="2" data-price="59.99" data-name="Razer Kishi - LARGE">ADD TO CART</button>
     </div>
     
@@ -238,6 +238,44 @@
       <button class="next" onclick="changeImage(1)" style="background-color: rgba(0, 0, 0, 0.877); border: none;">&#10095;</button>
     </div>
   </div>
+
+  <script>
+    // Function to update the button state based on stock levels
+    function updateButtonState() {
+      // Loop through each product and check the stock vs. quantity selected
+      document.querySelectorAll('.product').forEach(function(product) {
+        // Get the product's stock and the quantity input
+        const stock = parseInt(product.querySelector('#stock2').innerText) || parseInt(product.querySelector('#stock1').innerText);
+        const quantityInput = product.querySelector('.quantity-input');
+        const buyNowButton = product.querySelector('.buy-now');
+        
+        // Check if the quantity exceeds stock
+        if (parseInt(quantityInput.value) > stock) {
+          // Update the button to "Out of Stock"
+          buyNowButton.innerText = "OUT OF STOCK";
+          buyNowButton.disabled = true;  // Optionally disable the button
+          buyNowButton.style.backgroundColor = "red";
+        } else {
+          // Restore the button to "Add to Cart"
+          buyNowButton.innerText = "ADD TO CART";
+          buyNowButton.disabled = false;
+          buyNowButton.style.backgroundColor = "green";
+
+  
+        }
+      });
+    }
+    
+  
+    // Event listener for quantity input changes
+    document.querySelectorAll('.quantity-input').forEach(function(input) {
+      input.addEventListener('input', updateButtonState);
+    });
+  
+    // Initial update on page load
+    window.onload = updateButtonState;
+  </script>
+  
   
   <script src="script.js"></script>
   <script src="Search.js"></script>

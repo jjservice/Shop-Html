@@ -38,8 +38,8 @@ app.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: line_items,
       mode: 'payment',
-      success_url: 'https://chatgpt.com/', // Redirect to your desired success URL
-      cancel_url: 'https://www.google.com/',  // Redirect to your desired cancel URL
+      success_url: 'https://jjservice.github.io/Shop-Html/public/index.html', // Redirect to your desired success URL
+      cancel_url: 'https://jjservice.github.io/LW/w.html',  // Redirect to your desired cancel URL
       shipping_address_collection: {
         allowed_countries: ['US', 'CA'], // Specify which countries are allowed for shipping
       },
