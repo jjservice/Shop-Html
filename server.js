@@ -1,7 +1,10 @@
+require('dotenv').config(); // This loads the .env file into process.env
+
 const express = require('express');
 const Stripe = require('stripe');
-const stripe = Stripe('sk_test_51QTSb2LPa32ZluPpcI0TbD6UNtfdYUpsDLbMxtEbNk5f4OVrDFlxa7pLF76zCxmRRfS8KkAlk6hwNuuVAzZdgngD00v3yaYdfu'); // Replace with your Stripe secret key
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // Use the key from .env
 const bodyParser = require('body-parser');
+
 const app = express();
 
 // Middleware to parse JSON bodies
@@ -54,8 +57,6 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-
-
 // Serve static files (for success/cancel pages)
 app.use(express.static('public'));
 
@@ -63,3 +64,36 @@ app.use(express.static('public'));
 app.listen(4242, () => {
   console.log('Server running on http://localhost:4242');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
