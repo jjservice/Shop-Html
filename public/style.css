@@ -246,17 +246,17 @@ padding: 10px;
 .cart-container{
   position: fixed;
   margin: 0% auto;
-  top: 40%;
+  top: 61.7%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 90%;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.918);
   border-radius: 10px;
   box-shadow: 0px 2px 6px lightskyblue;
   padding: 10px;
   z-index: 100;
-  margin-top: 20px;
+
   color: white;
   display: inline;
   list-style-type: none;
@@ -1538,6 +1538,7 @@ footer{
    
     }
   
+ 
     #song-details{
       width: 500px;
     }
