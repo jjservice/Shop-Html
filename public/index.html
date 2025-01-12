@@ -89,6 +89,8 @@
   <h1 onclick="toggleClassPlayer()">LOLLIP<ion-icon name="color-palette-outline"></ion-icon>P SG</h1>
     
 
+  <button id="HideShow-Btn"><i class="fas fa-music"></i></button> 
+  
 
   <!-- Search Bar -->
   <input type="text" id="search-bar" placeholder=".;.LOLLITA CLUB.;." oninput="searchProducts()">
@@ -110,7 +112,6 @@
     <a href="About.html">About</a>
     <a href="ContactForm.html">Contact</a>
     <a href="Faq.html">FAQ</a>
-    <a href="https://jjservice.github.io/L2/1.html">MUSIC<ion-icon name="home"></ion-icon></a>
   </div>
 
   <!-- Navigation Section -->
@@ -122,6 +123,32 @@
     <button id="checkout-btn" style="display:none;">Proceed to Checkout</button>
   </div>
   </details>
+
+  
+  <ul class="song-details" id="song-details" style="display: none;">
+    <!-- Song Image -->
+    <img id="songImage" src="" alt="Song Image">
+    
+    <!-- Song Name and Artist Name -->
+    <div id="songInfo">
+        <h5 id="artistName">Artist Name</h5>
+        <h4 id="songName">Song Name</h4>
+        <!-- Search Input -->
+       
+    </div>
+
+    <div id="audio-controls">
+        <audio id="audioPlayer" src="#"></audio>
+        <button id="prevBtn"><i class="fas fa-step-backward"></i></button>
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <button id="nextBtn"><i class="fas fa-step-forward"></i></button>
+        <button id="randomBtn"><i class="fas fa-random"></i></button>
+    </div>
+
+    <!-- Track List Container -->
+    <ul id="trackList">list</ul>
+    <input type="text" id="searchInput" placeholder=".;.LOLLITA MUSIC.;.">
+</ul>
 
      <!-- Navigation Section -->
 
@@ -143,7 +170,7 @@
       </div>
   
       <div class="container">
-        <h5>LOLLIP<ion-icon name="headset-sharp"></ion-icon>P</h5> 
+        <h5 class="title-Rotation">LOLLIP<ion-icon name="headset-sharp"></ion-icon>P</h5> 
         <div class="Box">
             <div class="img">
   
@@ -276,9 +303,33 @@
     window.onload = updateButtonState;
   </script>
   
+
+  <script>
+    //////Hide And Show Section //////////
+
+const myButton = document.getElementById("HideShow-Btn");
+        const myImg = document.getElementById("song-details");
+
+        myButton.addEventListener("click", event => {
+            if (myImg.style.display === "none") {
+                myImg.style.display = "block";
+                myButton.style.color = "red";
+                myButton.style.border = "1px solid red";
+                myButton.innerHTML = ' <i class="fas fa-times"></i> '; // Show music note
+            } else {
+                myImg.style.display = "none";
+                myButton.style.color = "yellow";
+                myButton.style.border = "none";
+                myButton.style.borderTop = "2px solid yellow";
+                myButton.innerHTML = '<i class="fas fa-music"></i>'; // Show "X" icon
+            }
+        });
+
+  </script>
   
   <script src="script.js"></script>
   <script src="Search.js"></script>
+  <script src="music.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
